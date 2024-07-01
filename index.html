@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/svg" href="favicon.svg">
+  <title>PWA Demo</title>
+</head>
+<body>
+  <h1>PWA Demo App</h1>
+
+  <p>The following page will display functionality such as:</p>
+  <ul>
+    <li>Offline Mode</li>
+    <li>
+      Add to Home Screen
+      <button onclick="a2hs()">
+        Add me!
+      </button>
+    </li>
+    <li>
+      Notifications
+      <button onclick="notifyMe()">
+        Give it a try!
+      </button>
+    </li>
+    <li>
+      Push Messages
+      <button onclick="subscribe()">
+        Receive push!
+      </button>
+    </li>
+    <li>
+      Sensors Access?
+    </li>
+  </ul>
+
+  <script src="register-sw.js"></script>
+  <script src="notification.js"></script>
+  <script src="a2hs.js"></script>
+  <script src="push.js"></script>
+  <script src="sensors.js"></script>
+</body>
+</html>

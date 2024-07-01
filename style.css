@@ -1,0 +1,39 @@
+:root {
+  --primary: rgb(35, 244, 139);
+  --background: rgb(0, 0, 0);
+}
+
+body {
+  background: var(--background);
+  color: var(--primary);
+  font-family: sans-serif;
+}
+
+h1 {
+  padding: 1rem;
+  border: 2px dotted var(--primary);
+  text-align: center;
+}
+
+button {
+  padding: 0.25rem;
+  color: var(--primary);
+  font-size: 1.25rem;
+  background: transparent;
+  border: 2px solid var(--primary);
+  filter: blur(1px);
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🔥</text></svg>") 16 0,auto;
+}
+
+button:hover {
+  filter: blur(0);
+}
+
+ul {
+  list-style-type: "\1F680";
+}
+
+li {
+  padding: 1rem;
+  border-bottom: 1px solid var(--primary);
+}
