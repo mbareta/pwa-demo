@@ -8,9 +8,10 @@ function subscribe() {
   Notification.requestPermission().then(permission => {
     if (permission === 'granted') {
       serviceWorkerRegistration.pushManager.subscribe({
-        // applicationServerKey: 'secret',
         userVisibleOnly: true
-       }).then(console.log);
+       }).then(() => {
+        new Notification('Successfully subscribed!')
+       });
     }
   });
 }
