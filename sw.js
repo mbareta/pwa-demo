@@ -8,6 +8,7 @@ self.addEventListener('install', event => {
     'notification.js',
     'push.js',
     'register-sw.js',
+    'sensors.js',
     'style.css'
   ];
   event.waitUntil(caches.open('v1').then(cache => cache.addAll(files)));

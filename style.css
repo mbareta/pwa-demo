@@ -37,3 +37,9 @@ li {
   padding: 1rem;
   border-bottom: 1px solid var(--primary);
 }
+
+p {
+  margin: 2rem;
+  padding: 2rem;
+  word-break: break-all;
+}

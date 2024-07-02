@@ -55,3 +55,11 @@ UI is not a11y tested.
 Manifest JSON should include more icons and have them correctly sized.
 
 We should add screenshot to manifest.json for better installation experience.
+
+
+## Browser Compatibility
+
+- Offline Mode works in all browsers.
+- Notifications work across all modern browsers.
+- Push Notifications mostly work in all modern browsers.
+- Add to Home Screen is not supported in Firefox browsers.

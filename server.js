@@ -1,6 +1,6 @@
 'use strict';
 
-const url = 'https://updates.push.services.mozilla.com/wpush/v1/gAAAAABmgpj2zfEooNqPTe9UHX9n45WJDuBoHM5dN2IIU489xXoRQ_PdG9rcWl5vcbkGmi6y2FRAxXPgdQoWSJ-cLByBhskemn3o121iRhxHL8xWJjnJX4NOL_r7iQC8MaPO3en9aYrY';
+const url = 'https://updates.push.services.mozilla.com/wpush/v1/gAAAAABmg8YV2FNv93tBbHtfMIYh7W_NVZKsclUtqQ5c9uClja76QrxPSs9FSEJQKS8TC9FX0mW4JQ_kModdoOvpXpZveqEO5DDH4rGBLUwTgjrx15pnQCxiHR6X_-VowZT_hfxEmOi1';
 const headers = {
   TTL: 86400, Topic: 'new_notification'
 };
