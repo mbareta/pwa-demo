@@ -13,6 +13,7 @@ h1 {
   padding: 1rem;
   border: 2px dotted var(--primary);
   text-align: center;
+  animation: glow 5s infinite;
 }
 
 button {
@@ -39,7 +40,20 @@ li {
 }
 
 p {
-  margin: 2rem;
   padding: 2rem;
   word-break: break-all;
+}
+
+@keyframes glow {
+  0% {
+    filter: hue-rotate(0);
+  }
+
+  50% {
+    filter: hue-rotate(360deg);
+  }
+
+  1000% {
+    filter: hue-rotate(0);
+  }
 }

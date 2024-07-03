@@ -62,4 +62,17 @@ We should add screenshot to manifest.json for better installation experience.
 - Offline Mode works in all browsers.
 - Notifications work across all modern browsers.
 - Push Notifications work across all modern browsers.
-- Add to Home Screen is not supported in Firefox browsers.
+- Add to Home Screen is only supported in:
+  - desktop Chrome and Edge (any OS)
+  - Android, Firefox, Chrome, Edge, Opera and Samsung Internet
+  - iOS 16.3 and earlier (PWAs can only be installed with Safari)
+  - iOS 16.4 and later (PWAs can be installed from the Share menu in Safari, Chrome, Edge, Firefox, and Orion)
+
+## Installation from app stores
+
+Despite not having great browser support for installation, PWAs can be packaged
+and published to different app stores so users can install from there.
+
+More info here: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installation_from_an_app_store
+
+
