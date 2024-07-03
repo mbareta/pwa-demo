@@ -13,16 +13,12 @@ function subscribe() {
         message.innerHTML = existing.endpoint;
         return;
       }
-      swRegistration.pushManager.subscribe({
-        // HACK: this key is not used, it's just here to allow subscribing to push in Chrome
-        applicationServerKey: 'BN0w947cv52N6yZJ-KBUIOqRKkWFxtXcf00kzUZIPCRYlvYk1x5fJljzM6RnVFTfUNOy7RjOczuIaezzyJEtR9w',
-        userVisibleOnly: true
-       }).then(({ endpoint }) => {
-        message.innerHTML = endpoint;
-        new Notification('Successfully subscribed!')
-       }).catch(err => {
-        message.innerHTML = err;
-       });
+      swRegistration.pushManager.subscribe({ userVisibleOnly: true })
+        .then(({ endpoint }) => {
+          message.innerHTML = endpoint;
+          new Notification('Successfully subscribed!')
+        })
+        .catch(err => (message.innerHTML = err));
     }
   });
 }
