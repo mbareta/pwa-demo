@@ -8,10 +8,14 @@ function subscribe() {
   Notification.requestPermission().then(async permission => {
     message.innerHTML = permission;
     if (permission === 'granted') {
-      const existing = await swRegistration.pushManager.getSubscription();
-      if (existing) {
-        message.innerHTML = existing.endpoint;
-        return;
+      try {
+        const existing = await swRegistration.pushManager.getSubscription();
+        if (existing) {
+          message.innerHTML = existing.endpoint;
+          return;
+        }
+      } catch (err) {
+        console.log(err);
       }
       swRegistration.pushManager.subscribe({ userVisibleOnly: true })
         .then(({ endpoint }) => {

@@ -61,5 +61,5 @@ We should add screenshot to manifest.json for better installation experience.
 
 - Offline Mode works in all browsers.
 - Notifications work across all modern browsers.
-- Push Notifications mostly work in all modern browsers.
+- Push Notifications work across all modern browsers.
 - Add to Home Screen is not supported in Firefox browsers.
