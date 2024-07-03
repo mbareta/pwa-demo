@@ -31,16 +31,15 @@ self.addEventListener('push', (event) => {
   }
   event.target.registration.showNotification('Demo Notification', {
     actions: [{ action: 'handleclick', title: 'Click Me!' }],
-    body: 'Click me',
-    data: 'This is the payload'
+    // docs: https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData
+    body: event.data.text()
   });
 });
 
 self.addEventListener('notificationclick', event => {
   event.waitUntil(clients.matchAll().then(windows => {
-    const url = 'http://localhost:8080/';
-    if (!windows.length) return clients.openWindow(url);
-    windows[0].navigate(url);
+    if (!windows.length) return clients.openWindow(self.location.origin);
+    windows[0].navigate(self.location.origin);
     windows[0].focus();
   }));
 });

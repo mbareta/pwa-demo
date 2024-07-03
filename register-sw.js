@@ -9,9 +9,8 @@ if ("serviceWorker" in navigator) {
   );
 
   navigator.serviceWorker.ready.then(registration => {
-    registration.pushManager.getSubscription().then(console.log);
-    serviceWorkerRegistration = registration;
+    swRegistration = registration;
   });
 } else {
-  console.log('This browser does not support service worker.')
+  alert('This browser does not support service worker.')
 }
