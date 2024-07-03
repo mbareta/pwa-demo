@@ -9,14 +9,25 @@ self.addEventListener('install', event => {
     'push.js',
     'register-sw.js',
     'sensors.js',
-    'style.css'
+    'style.css',
+    'sw-messages.js'
   ];
   event.waitUntil(caches.open('v1').then(cache => cache.addAll(files)));
 });
 
 self.addEventListener('activate', event => event.waitUntil(self.clients.claim()));
 
-self.addEventListener('fetch', event => {
+self.addEventListener('message', event => {
+  console.log(`Client says: ${event.data}`);
+});
+
+self.addEventListener('fetch', async event => {
+  if (event.clientId) {
+    const client = await self.clients.get(event.clientId);
+    if (client) {
+      client.postMessage(`SW fetching ${event.request.url}`);
+    }
+  }
   event.respondWith(caches.open('v1').then(cache => {
     return fetch(event.request).catch(() => {
       if (event.request.mode === 'navigate') return cache.match('index.html');
