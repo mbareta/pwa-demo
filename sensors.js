@@ -1,5 +1,3 @@
 document.querySelectorAll('button').forEach(button => {
-  button.addEventListener('click', function() {
-    navigator.vibrate(150);
-  });
+  button.addEventListener('click', () => navigator.vibrate(150));
 })

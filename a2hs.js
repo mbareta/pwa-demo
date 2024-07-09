@@ -1,9 +1,6 @@
 let a2hsPrompt;
 
-window.addEventListener('beforeinstallprompt', e => {
-  console.log('A2HS', e);
-  a2hsPrompt = e;
-});
+window.addEventListener('beforeinstallprompt', e => (a2hsPrompt = e));
 
 function a2hs() {
   if (!a2hsPrompt) return alert('Not allowed or not supported.');
