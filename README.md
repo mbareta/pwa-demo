@@ -1,5 +1,7 @@
 # PWA Demo Application
 
+Demo available here https://mbareta.github.io/pwa-demo/
+
 ## Description
 
 This is a demo repo to display various PWA techniques, such as:
