@@ -17,11 +17,15 @@ h1 {
 }
 
 button {
+  width: 10rem;
+  float: right;
+  margin-top: 0.55rem;
   padding: 0.25rem;
   color: var(--primary);
   font-size: 1.25rem;
   background: transparent;
   border: 2px solid var(--primary);
+  transform: translateY(-50%);
   filter: blur(1px);
   cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🔥</text></svg>") 16 0,auto;
 }
@@ -41,6 +45,7 @@ li {
 
 p {
   padding: 2rem;
+  line-height: 1.5;
   word-break: break-all;
 }
 

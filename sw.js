@@ -36,7 +36,7 @@ self.addEventListener('fetch', async event => {
   }))
 });
 
-self.addEventListener('push', (event) => {
+self.addEventListener('push', event => {
   if (!(self.Notification && self.Notification.permission === 'granted')) {
     return;
   }
