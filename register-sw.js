@@ -7,7 +7,7 @@ if ("serviceWorker" in navigator) {
       console.error('Service worker registration failed.', error);
     }
   );
-  return navigator.serviceWorker.ready
+  navigator.serviceWorker.ready
     .then(registration => (swRegistration = registration));
 } else {
   alert('This browser does not support service worker.')
