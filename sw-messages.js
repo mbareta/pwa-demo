@@ -5,7 +5,7 @@ if ("serviceWorker" in navigator) {
 
   document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', () => {
-      swRegistration.active.postMessage(`Button ${button} clicked.`);
+      swRegistration?.active.postMessage(`Button ${button} clicked.`);
     });
   })
 }
